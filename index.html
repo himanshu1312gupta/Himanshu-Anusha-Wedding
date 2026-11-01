@@ -1,4 +1,3 @@
-name=gemini-code-1790414167362.html
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,8 +38,29 @@ button{cursor:pointer}
 .rule:before,.rule:after{content:"";height:1px;background:var(--line);flex:1}
 .rule span{font-size:13px;transform:rotate(45deg)}
 .nav{position:absolute;z-index:40;bottom:26px;left:0;right:0;text-align:center;pointer-events:none}
-.nav button,.plain{border:0;background:none;color:var(--wine);font:500 9px var(--body);letter-spacing:.25em;text-transform:uppercase;padding:10px;pointer-events:auto}
+.nav button:not(.highlight-btn),.plain{border:0;background:none;color:var(--wine);font:500 9px var(--body);letter-spacing:.25em;text-transform:uppercase;padding:10px;pointer-events:auto}
 .pageno{font:400 8px var(--body);letter-spacing:.18em;color:#4d1e2b80;margin-left:10px}
+
+/* HIGHLIGHTED PAGE 2 BUTTON */
+.highlight-btn {
+  display: inline-block;
+  background: var(--wine) !important;
+  color: #fff3e8 !important;
+  padding: 12px 28px !important;
+  border-radius: 30px;
+  border: 1px solid var(--wine) !important;
+  box-shadow: 0 6px 15px rgba(77, 30, 43, 0.25);
+  font: 500 9px var(--body);
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+.highlight-btn:hover {
+  background: var(--ink) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(77, 30, 43, 0.35);
+}
 
 /* CLEARLY VISIBLE PRIMARY BUTTON */
 .continue-btn {
@@ -223,7 +243,7 @@ button{cursor:pointer}
   pointer-events: none;
 }
 
-/* Elegant Typography & Button Below */
+/* HIGHLIGHTED INVITATION BUTTON */
 .env-msg-top {
   display: flex; align-items: center; justify-content: center; gap: 15px;
   margin-top: 10px; margin-bottom: 8px; opacity: 0.8;
@@ -235,13 +255,14 @@ button{cursor:pointer}
 }
 .env-btn {
   margin-top: 35px;
-  background: transparent; border: 1px solid #b9935580; border-radius: 40px;
-  padding: 14px 38px;
-  font-family: var(--body); font-weight: 500; font-size: 9px; letter-spacing: 0.3em;
-  color: #72564c; text-transform: uppercase;
+  background: var(--gold); border: 1px solid var(--gold); border-radius: 40px;
+  padding: 16px 42px;
+  font-family: var(--body); font-weight: 600; font-size: 10px; letter-spacing: 0.3em;
+  color: #fff; text-transform: uppercase;
   transition: all 0.4s var(--ease); cursor: pointer;
+  box-shadow: 0 8px 25px rgba(185, 147, 85, 0.4);
 }
-.env-btn:hover { background: #b9935515; border-color: #b99355; transform: translateY(-2px); }
+.env-btn:hover { background: #a57f45; border-color: #a57f45; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(185, 147, 85, 0.5); }
 
 #p1.out { animation: romanticExit 1s var(--ease) forwards; pointer-events: none; }
 #p1.out .envelope-scene { transform: scale(1.03); opacity: 0; transition: 0.8s; }
@@ -330,9 +351,6 @@ button.continue {
 
 /* 05 */
 #p5{display:none;align-items:center;justify-content:center;flex-direction:column;padding:55px 22px 70px;background:radial-gradient(circle at 50% 20%,#fff,transparent 30%),linear-gradient(160deg,#f6eee3,#eadfcf)}#p5.active{display:block;z-index:2}.venue{text-align:center;width:min(100%,570px);margin:0 auto;}.venue h2{font:400 clamp(48px,12vw,78px) var(--display);color:var(--wine);margin:8px 0}.vname{font:500 clamp(25px,6vw,36px) var(--serif);margin-top:28px}.vplace{font:500 9px var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:8px}.mandap{width:min(86vw,450px);height:280px;margin:28px auto 0;position:relative;display:flex;align-items:center;justify-content:center}.mandap svg{position:absolute;inset:0;width:100%;height:100%}.mandap-label{position:relative;z-index:2}.mandap-label .small{font:500 8px var(--body);letter-spacing:.28em;color:#8d6b35}.mandap-label .big{font:italic 45px var(--script);color:var(--wine);margin-top:8px}.mapbtn{display:inline-flex;gap:12px;margin-top:28px;padding:15px 26px;border:1px solid var(--gold);color:var(--wine);background:#fffaf380;font:500 9px var(--body);letter-spacing:.23em;text-transform:uppercase;transition:.45s var(--ease)}.mapbtn:hover{background:var(--wine);color:white}.divider{height:1px;background:var(--line);margin:48px 0 35px}.look{font:500 8px var(--body);letter-spacing:.34em;color:#8d6b35}.dress-title{font:400 22px var(--display);letter-spacing:.18em;color:var(--wine);margin-top:9px}.peach{font:400 clamp(72px,18vw,125px)/.8 var(--display);color:var(--peach);margin-top:25px;text-shadow:1px 1px #8d6b3533}.dress-meta{margin-top:18px;font:500 9px var(--body);letter-spacing:.25em;color:var(--muted)}
-
-/* map */
-#map{display:none;align-items:center;justify-content:center;padding:45px 24px 90px;background:radial-gradient(circle at 70% 15%,#d9bf8b29,transparent 30%),linear-gradient(145deg,#3b1822,#4d1e2b 55%,#29161a);color:#f7eee4;overflow:hidden;}#map.active{display:flex;z-index:2}.mapinner{text-align:center;width:min(100%,560px)}.mapinner .eyebrow{color:var(--gold2)}.mapinner h2{font:400 clamp(52px,12vw,78px) var(--display);margin:13px 0;color:#fff3e6}.mapart{width:min(90vw,520px);height:300px;margin:28px auto 20px;border:1px solid #d9bf8b59;position:relative;background:linear-gradient(23deg,transparent 47%,#d9bf8b2e 48% 49%,transparent 50%),linear-gradient(83deg,transparent 53%,#d9bf8b1f 54% 55%,transparent 56%)}.mapart:before,.mapart:after{content:"";position:absolute;height:1px;background:#d9bf8b2e;width:140%;left:-20%}.mapart:before{top:32%;transform:rotate(-14deg)}.mapart:after{top:67%;transform:rotate(11deg)}.pin{position:absolute;left:50%;top:50%;width:34px;height:34px;border-radius:50% 50% 50% 0;background:var(--gold2);transform:translate(-50%,-50%) rotate(-45deg);box-shadow:0 0 0 12px #d9bf8b14,0 0 45px #d9bf8b59}.pin:after{content:"";position:absolute;width:10px;height:10px;background:var(--wine);border-radius:50%;left:12px;top:12px}.dest{font:500 9px var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--gold2)}.mapname{font:500 25px var(--serif);margin-top:8px}.maps{display:inline-flex;margin-top:28px;padding:16px 28px;background:var(--gold2);color:var(--wine);text-decoration:none;font:600 9px var(--body);letter-spacing:.24em;text-transform:uppercase}.back{display:block;margin:20px auto 0;border:0;background:none;color:#dbc8bb;font:500 8px var(--body);letter-spacing:.25em;text-transform:uppercase}
 
 /* 06 - WISHES */
 #p6{display:none;align-items:center;justify-content:center;padding:65px 22px 105px;background:radial-gradient(circle at 50% 15%,#fff,transparent 30%),linear-gradient(145deg,#f7efe5,#e9dbcf)}#p6.active{display:flex;z-index:2}.wishes{text-align:center;width:min(100%,540px)}.wishes h2{font:400 clamp(50px,12vw,78px) var(--display);color:var(--wine);margin:10px 0}.wishintro{font:italic 16px var(--script);color:var(--muted);max-width:400px;margin:0 auto 34px}.form{width:min(100%,450px);margin:auto;text-align:left}.field{position:relative;margin:18px 0 24px}.field input,.field textarea{width:100%;border:0;border-bottom:1px solid #8d6b3580;background:transparent;padding:13px 2px 11px;outline:none;color:var(--ink);font:400 17px var(--serif)}.field textarea{min-height:100px;resize:vertical}.field label{position:absolute;left:2px;top:12px;pointer-events:none;color:#8d7970;font:500 8px var(--body);letter-spacing:.22em;text-transform:uppercase;transition:.3s}.field input:focus+label,.field input:not(:placeholder-shown)+label,.field textarea:focus+label,.field textarea:not(:placeholder-shown)+label{top:-7px;font-size:7px;color:#8d6b35}.att-title{font:500 8px var(--body);letter-spacing:.24em;text-transform:uppercase;color:#8d6b35;margin:28px 0 12px}.attendance{display:grid;grid-template-columns:1fr 1fr;gap:10px}.attendance input{display:none}.attendance label{display:block;border:1px solid #8d6b3561;padding:15px 10px;text-align:center;font:500 9px var(--body);letter-spacing:.08em;color:var(--muted);transition:.35s}.attendance input:checked+label{background:var(--wine);color:#fff3e8;border-color:var(--wine)}.send{width:100%;margin-top:25px;border:1px solid #8d6b35;background:var(--wine);color:#fff3e8;padding:17px;font:500 9px var(--body);letter-spacing:.3em;text-transform:uppercase}.status{text-align:center;min-height:28px;margin-top:16px;font:italic 14px var(--script);color:var(--wine)}.signature{margin-top:40px;font:italic 32px var(--script);color:var(--wine)}.foot{margin-top:8px;font:500 7px var(--body);letter-spacing:.25em;color:var(--muted);text-transform:uppercase}.curtain{position:fixed;inset:0;background:var(--ivory);z-index:999;transform:translateY(101%);pointer-events:none}.curtain.play{animation:curtain .9s var(--ease)}
@@ -469,7 +487,7 @@ button.continue {
       <span class="env-line"></span><span class="env-heart">♥</span><span class="env-line"></span>
     </div>
     <div class="env-msg">A little invitation to forever</div>
-    <button class="env-btn" id="openBtn" onclick="handleEnvClick()">OPEN INVITATION</button>
+    <button class="env-btn" id="openBtn" onclick="handleEnvClick()">CLICK HERE</button>
   </div>
 </section>
 
@@ -492,8 +510,8 @@ button.continue {
   </div>
   
   <div class="nav">
-    <button style="pointer-events:auto;" onclick="go('p3')">CONTINUE →</button>
-    <span class="pageno">02 / 06</span>
+    <button class="highlight-btn" onclick="go('p3')">CONTINUE →</button>
+    <div style="margin-top: 8px;"><span class="pageno">02 / 06</span></div>
   </div>
 </section>
 
@@ -620,33 +638,21 @@ button.continue {
         <div class="big">Abhinandan</div>
       </div>
     </div>
-    <button class="mapbtn" onclick="openMap()">⌖ &nbsp; FIND THE VENUE ↗</button>
+    
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 28px;">
+      <a class="mapbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Abhinandan+Lawn+Waraseoni+Madhya+Pradesh" style="margin-top: 0; text-decoration: none;">⌖ &nbsp; DIRECT GOOGLE MAPS ↗</a>
+      <button class="continue-btn" onclick="go('p6')" style="margin: 0;">CONTINUE TO WISHES &rarr;</button>
+    </div>
+
     <div class="divider"></div>
     
     <div class="look">THE LOOK</div>
     <div class="dress-title">DRESS CODE</div>
     <div class="peach">Peach</div>
     <div class="dress-meta">HALDI · MEHNDI &nbsp; / &nbsp; 24 NOVEMBER</div>
-    
-    <button class="continue-btn" onclick="go('p6')">CONTINUE TO WISHES &rarr;</button>
   </div>
   
   <div class="nav"><span class="pageno">05 / 06</span></div>
-</section>
-
-<!-- MAP POPUP -->
-<section class="page" id="map">
-  <div class="mapinner">
-    <div class="eyebrow">YOUR DESTINATION</div>
-    <h2>Find Your Way</h2>
-    <div class="sub">The celebration awaits at</div>
-    <div class="mapart"><div class="pin"></div></div>
-    <div class="dest">VENUE</div>
-    <div class="mapname">Abhinandan Lawn</div>
-    <div class="sub">Waraseoni, Madhya Pradesh</div>
-    <a class="maps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Abhinandan+Lawn+Waraseoni+Madhya+Pradesh">OPEN GOOGLE MAPS ↗</a>
-    <button class="back" onclick="closeMap()">← BACK TO INVITATION</button>
-  </div>
 </section>
 
 <!-- 06 — WISHES -->
@@ -693,7 +699,7 @@ button.continue {
 
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script>
-const ids=['p1','p2','p3','p4','p5','map','p6'];let current='p1';const curtain=document.getElementById('curtain');
+const ids=['p1','p2','p3','p4','p5','p6'];let current='p1';const curtain=document.getElementById('curtain');
 function render(id){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));let next=document.getElementById(id);next.classList.add('active');next.scrollTop=0;document.getElementById('app').scrollTop=0;if(id==='p2'){document.getElementById('p2').classList.remove('ready');setTimeout(()=>document.getElementById('p2').classList.add('ready'),80)}if(id==='p3')setTimeout(initScratch,100);current=id}
 function go(id){curtain.classList.remove('play');void curtain.offsetWidth;curtain.classList.add('play');setTimeout(()=>render(id),420)}
 
@@ -710,7 +716,6 @@ window.handleEnvClick = function() {
   }
 };
 
-function openMap(){go('map')}function closeMap(){go('p5')}
 let scratchStarted=false,canvas=document.getElementById('scratchCanvas'),ctx=canvas.getContext('2d',{willReadFrequently:true}),drawing=false,last=null,count=0;
 function initScratch(){if(scratchStarted)return;scratchStarted=true;resizeScratch()}
 function resizeScratch(){const r=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);let g=ctx.createLinearGradient(0,0,r.width,r.height);g.addColorStop(0,'#b99d75');g.addColorStop(.3,'#e0c895');g.addColorStop(.5,'#a98554');g.addColorStop(.72,'#d8bf8d');g.addColorStop(1,'#947346');ctx.globalCompositeOperation='source-over';ctx.fillStyle=g;ctx.fillRect(0,0,r.width,r.height);for(let i=0;i<900;i++){ctx.fillStyle='rgba(255,255,255,'+(Math.random()*.12)+')';ctx.fillRect(Math.random()*r.width,Math.random()*r.height,Math.random()*2+.2,Math.random()*2+.2)}ctx.fillStyle='#fffaf0e0';ctx.font='500 10px Montserrat';ctx.textAlign='center';ctx.fillText('A LITTLE SECRET',r.width/2,r.height/2-15);ctx.fillStyle='#3724199e';ctx.font='italic 28px Playfair Display';ctx.fillText('gently reveal',r.width/2,r.height/2+22)}
